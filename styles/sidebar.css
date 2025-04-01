@@ -1,0 +1,198 @@
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    background-color:  rgb(217, 241, 245); 
+    top: 17%;
+    right: 3%;
+    height: 250px;
+    border: 1px solid rgb(164, 157, 157);
+    border-radius: 10px;
+    color: rgb(93, 80, 91);
+}
+.sidebar .current-pg{
+    background-color:  rgb(39, 164, 247);
+    display: flex;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+.sidebar .current-pg:hover{
+    background-color: rgb(22, 187, 208);
+}
+.sidebar div{
+    display: flex;
+    align-items: center;
+}
+.sidebar button{
+    background-color:  rgb(233, 252, 255);
+}
+.change-theme{
+    position: absolute;
+    background-color:rgb(230, 230, 241);
+    border: 1px solid blue; 
+    border-radius: 7px;
+    padding: 8px;
+    right: 2%;
+    top: -12%;
+}
+.sidebar-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    width: 120px;
+    height: 280px;
+    font-size: 2vh;
+    background-color:  rgb(217, 241, 245);
+    border: 1px solid rgb(164, 157, 157);
+    border-top-left-radius: 10px;
+    color: rgb(10, 8, 10);
+    cursor: pointer;
+}
+.swtch-infor{
+    font-size: 1.9vh;
+    color: rgb(123, 120, 120);
+}
+.bottom-section{
+    position: absolute;
+    background-color: rgb(204, 231, 233);;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: -15%;
+    left: 5%;
+    right: 5%;
+    height: 50px;
+    border: 1px solid rgb(188, 186, 186);
+    border-radius: 40px;
+    box-shadow: inset 2px 2px rgb(193, 188, 188);
+}
+.gth{
+    width: 100px;
+}
+.gth .tool-tip{
+    position: absolute;
+    left: 25px;
+    bottom: -14px;
+}
+.contact .tool-tip{
+    position: absolute;
+    right: -2px;
+    bottom: -10px;
+}
+.support, .gth, .contact{
+    cursor: pointer;
+    position: relative;
+    padding: 4px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    background-color:  rgb(209, 243, 249);
+}
+.gth:hover, .support:hover, .contact:hover{
+    background-color: rgb(236, 255, 158);
+    border: 1px solid rgb(173, 172, 172);
+}
+.support a button{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(131, 245, 251);
+    height: 40px;
+    cursor: pointer;
+    margin-right: 2px;
+    font-size: large ;
+}
+.support button:hover .tool-tip, .gth:hover .tool-tip,
+.contact:hover .tool-tip
+{
+    opacity: 1;
+    transition: .5s;
+}
+.support button:hover{
+    background-color: rgb(182, 236, 231);
+    padding: 8px;
+    border-radius: 4px;
+}
+.tool-tip{
+    pointer-events: none;
+}
+.dollar-icon{
+    height: 60px;
+    width: 60px;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0);
+}
+.bottom-section div{
+    margin-left: 10px;
+}
+.keyboard-section{
+    position: absolute;
+    bottom: 10px;
+    border: 1px solid rgb(156, 155, 155);
+}
+.keyboard{
+    position: relative;
+    width: 500px;
+    background-color: rgb(220, 213, 213);
+}
+.keyboard span{
+    font-size: small;
+    color: rgb(81, 75, 75);
+    background-color: white;
+    width: 27px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.keyboard .row{
+    display: flex;
+    justify-content: space-between;
+}
+.row .middle, .row .m2 {
+   background-color: rgb(115, 185, 154); 
+}
+.row .lft1{
+    background-color: rgb(143, 197, 207);
+}
+.row .rght1{
+    background-color:  rgb(143, 197, 207);
+}
+.row .left2{
+    background-color: rgb(187, 234, 247);
+}
+.row .rght2{
+    background-color: rgb(187, 234, 247);
+}
+.row .left, .row .rght{
+ background-color: rgb(159, 226, 238);
+}
+.sidebar a button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.sidebar a button:hover{
+ background-color: gainsboro;
+}
+

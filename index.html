@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="learn touch typing with this simplified beginner friendly site">
+    <meta name="keywords" content="touch typing simple beginner friendly">
+    <title>(mywebsite).com</title>
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/anim.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <main>
+        <section class="page-title">
+            <p>
+                My home of touch typing
+            </p>
+        </section>
+        <div class="ltr-emmtr " >
+            Anime:  <input type="checkbox" checked class="js-ltr-emmtr emtr-c-b">
+            <div class="tool-tip">
+                animates screen with letters on mouse moves
+           </div>
+        </div>
+        <div class="sidebar-left">
+            <p>beginner tips:</p>
+            <ul>
+                <li>Focus on accuracy, not speed</li>
+                <li>Practice right posture and proper finger placement</li>
+                <li>Use all your fingers to type</li>
+                <li>Train each finger to press specific keys</li>
+            </ul>
+        </div>
+        <div class="sidebar js-sidebar">
+            <div>
+                <div class="icon">
+                    <img src="icons/arrow.png" alt="keyboard icon" class="kb-icon">
+                    <div class="tool-tip">
+                        practice section
+                    </div>
+                </div>
+                <div class="current-pg">
+                    <p>typing practice</p>
+                </div>
+            </div>
+            <div>
+                <div class="icon">
+                    <img src="icons/speed.png" alt="speed icon" class="sp-icon">
+                    <div class="tool-tip">
+                        take a speed test
+                   </div>
+                </div>
+                <a href="typing-test.html">
+                    <button class="speed-test js-speed-test">
+                        speed test
+                    </button>
+                </a>
+            </div>
+           <div>
+                <div class="icon">
+                    <img src="icons/info.png" alt="infor" class="abt-icon">
+                    <div class="tool-tip">
+                        learn more
+                    </div>
+                </div>
+                <a href="about.html">
+                    <button>About</button>
+                </a>
+           </div>
+            <div>
+                <div class="icon">
+                    <img src="icons/lock-in-a-circle.png" alt="privacy icon" class="pp-icon">
+                    <div class="tool-tip">
+                       privacy policy
+                   </div>
+                </div>
+                <a href="privacy.html">
+                    <button>privacy policy & Terms of service</button>
+                </a>
+            </div>
+             
+        </div>
+        <section class="key-sec">
+            <div class="not-clbrtd"><div></div>Not calibrated <span>(more samples needed)</span></div>
+            <div class="low"><div></div>low accuracy <span>(below 65%)</span></div>
+            <div class="average"><div></div>average accuracy<span>(65-95%)</span></div>
+            <div class="standard"><div></div>standard accuracy<span>(above 95%)</span></div>
+        </section>
+        <section class="current-ltrs">
+            <div>Current letters:
+                <div class="tool-tip">
+                    New letters are added if you
+                    hit 25WPM with over 75% accuracy
+                </div>
+            </div>
+            <div class="c-ltrs"></div>
+        </section>  
+        <section class="all-ltrs js-all-ltrs">
+            <p>All letters:</p>
+            <p class="clbrtn">Calibration:</p>
+            <div class="key">Key: </div>
+            <div>A<div class="clbn"></div></div> <div>B<div class="clbn"></div></div> <div>C<div class="clbn"></div></div> 
+            <div>D<div class="clbn"></div></div>
+            <div>E<div class="clbn"></div></div> <div>F<div class="clbn"></div></div> <div>G<div class="clbn"></div></div> 
+            <div>H<div class="clbn"></div></div>
+            <div>I<div class="clbn"></div></div> <div>J<div class="clbn"></div></div> <div>K<div class="clbn"></div></div>
+            <div>L<div class="clbn"></div></div>
+            <div>M<div class="clbn"></div></div> <div>N<div class="clbn"></div></div><div>O<div class="clbn"></div></div> 
+            <div>P<div class="clbn"></div></div>
+            <div>Q<div class="clbn"></div></div><div>R<div class="clbn"></div></div> <div>S<div class="clbn"></div></div> 
+            <div>T<div class="clbn"></div></div>
+            <div>U<div class="clbn"></div></div><div>V<div class="clbn"></div></div> <div>W<div class="clbn"></div></div>
+            <div>X<div class="clbn"></div></div>
+            <div>Y<div class="clbn"></div></div><div>Z<div class="clbn"></div></div> 
+
+        </section>    
+       <div class="stp-on-err">
+            <p>stop on error:</p>
+            <input type="checkbox" class="js-stp-on-err-chck stpIn" checked>
+            <div class="tool-tip">
+                Stops progress if you miss a key
+           </div>
+            <!-- <input type="checkbox" class="js-tst-stp-on-err-chck" checked>-->
+       </div>
+       <div class="set-sess-dur-sec">
+            <p>set session duration:</p>
+            <select name="" id="select">
+                <option value="0.5">30 secs</option>
+                <option value="1">1 min</option>
+                <option value="2">2 mins</option>
+                <option value="3">3 mins</option>
+                <option value="4">4 mins</option>
+                <option value="5">5 mins</option>
+            </select>
+            <div class="tool-tip">
+               speed and accuracy are displayed after the set time
+           </div>
+       </div>
+        <div class="daily-goal-section">
+         <p> daily goal: <span class="chars-calc ">
+            (<span class="js-char-calc" id="cc"></span>/ 
+            <span class="goal js-goal">2500</span>  chars)
+          </span>
+         </p>
+            <div class="progress-bar js-pgrs-bar"></div>
+            <div class="bravo-m js-bravo"><p>Bravoo ! daily goal achieved</p></div>
+        </div>
+        <!--<button class="strt-test-btn js-strt-test-btn">start test</button>-->
+        <section class="word-section-cont js-word-cont">
+            <div class="timer js-timer"></div>
+            <div class="chars-actv-msg">
+                chars active!
+            </div>
+            <button class="click-to-strt-btn js-click-to-strt-btn">
+                click to start
+                <div class="tool-tip">click or press Enter to start</div>
+            </button>
+            <button class="restart-btn js-restart-btn">
+                restart
+                <div class="tool-tip">click or press Enter to restart</div>
+            </button>
+            <p class="speed-txt js-spd-txt">Speed:</p>
+            <div class="speed-sec js-speed-sec">
+            </div>
+            <p class="accuracy-txt js-acc-txt">Accuracy:</p>
+            <div class="accuracy-sec js-accuracy-sec">
+            </div>
+            <div class="word-section js-word-section" > 
+            </div>
+        </section>
+        <section class="keyboard-section js-kbrd-sec">
+            <div class="keyboard js-kb">
+                <div class="row">
+                    <span class="left">`</span><span class="left2">1</span><span class="left2">2</span><span class="lft1">3</span>
+                    <span class="lft1">4</span><span class="middle">5</span><span class="middle">6</span><span class="rght1">7</span>
+                    <span class="rght1">8</span><span class="rght2">9</span><span class="rght2">0</span><span class="m2">-</span>
+                    <span class="m2">=</span><span style="width: 82px;" class="rght">Backspace</span>
+                </div>
+                <div class="row">
+                    <span style="width: 70px;" class="left">Tab</span><span class="left2">Q</span><span class="left2">W</span><span class="lft1">E</span>
+                    <span class="lft1">R</span><span class="middle">T</span><span class="middle">Y</span><span class="rght1">U</span>
+                    <span class="rght1">I</span><span class="rght2">O</span><span class="rght2">P</span><span class="m2">[</span>
+                    <span class="m2">]</span><span style="width: 82px;" class="rght">Enter</span>
+                </div>
+                <div class="row">
+                    <span style="width: 84px;"class="left" >CapsLock</span><span class="left2">A</span><span class="left2">S</span><span class="lft1">D</span>
+                    <span class="lft1">F</span><span class="middle">G</span><span class="middle">H</span><span class="rght1">J</span>
+                    <span class="rght1">K</span><span class="rght2">L</span><span class="rght2">;</span><span class="m2">,</span>
+                    <span class="m2">#</span><span style="width: 75px;" class="rght"></span>
+                </div>
+                <div class="row">
+                    <span style="width: 84px;" class="left">Shift</span><span class="left2">\</span><span class="left2">Z</span><span class="lft1">X</span>
+                    <span class="lft1">C</span><span class="middle">V</span><span class="middle">B</span><span class="rght1">N</span>
+                    <span class="rght1">M</span><span class="rght2">,</span><span class="rght2" >.</span><span class="m2" >/</span>
+                  <span style="width: 82px;" class="rght">Shift</span>
+                </div>
+                <div class="row">
+                    <span style="width: 84px;" class="left">Ctrl</span><span class="left2">Fn</span>
+                    <span class="left2"></span><span class="left2">Alt</span><span style="width: 160px ; background-color: rgb(187, 214, 204);"></span>
+                    <span style="width: 35px;" class="rght2">AltGr</span><span class="rght2">Ctrl</span><span class="m2"></span>
+                    <span class="rght"></span><span class="rght"></span>
+                </div>
+            </div>
+        </section>
+        <section class="bottom-section">
+            <div class="support">
+                <a href="support.html">
+                    <button>
+                        Support
+                        <span class="dollar-icon">$</span>
+                        <div class="tool-tip">
+                            <span style="color: rgb(255, 250, 250); font-size: small;">click for more infor</span>
+                        </div>
+                    </button>  
+                </a>
+                <span style="color: gray; font-size: small;">(paypal/Mobile Money)</span>
+            </div>
+                
+            <div class="contact">
+                Contact: <span style="color: gray; font-size: small;"><del>infor@justtype.com</del>/Tel: 0113399759</span>
+                <div class="tool-tip">
+                    <span style="color: rgb(255, 250, 250); font-size: small;">Talk to us</span>
+                </div>
+            </div>
+            <div class="gth">
+                Github
+                <div class="tool-tip">
+                   <span style="color: rgb(255, 250, 250); font-size: small;">source code will be available soon</span>
+                </div>
+            </div>
+        </section>
+    </main>   
+    <script src="javascript/app.js">
+    </script>
+    <script src="javascript/anim.js"></script>
+</body>
+</html>
+

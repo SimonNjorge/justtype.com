@@ -1,0 +1,33 @@
+.strt-test-btn{
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    font-size: 2.5vmin;
+    color: white;
+    background-color:  rgb(21, 203, 235);
+    border-radius: 4px;
+    top: 2%;
+    left: 2%;
+    z-index: 9;
+   
+}
+.strt-test-btn:hover{
+    background-color:  rgb(22, 187, 208);
+    border: 1px solid rgb(191, 190, 190);;
+}
+.strt-test-btn:hover .tool-tip{
+    opacity: 1;
+}
+.restart-btn{
+    background-color: rgb(221, 249, 250);
+    border-radius: 4px;
+}
+.restart-btn:hover .tool-tip{
+    opacity: 1;
+}
+.daily-goal-section {
+    display: none;
+}
+.js-stp-on-err-chck{
+ display: none;
+}

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: rgb(215, 239, 246);
+ }
+     
+ main{
+     height: 550px;
+     width: 1000px;
+     display: flex;
+     flex-direction: column;
+     margin-top: 70px;
+     margin-left: 10px;
+     position: relative;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(204, 231, 233);
+     border-radius: 8px;
+     box-shadow: inset 2px 2px rgb(193, 188, 188);
+ }
+ button{
+     position: absolute;
+     top: 4px;
+     cursor: pointer;
+     left: 4px;
+     color: white;
+     border-radius: 6px;
+     border: none;
+     background-color: grey;
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 15px;
+ }
+ p{
+     margin: 8px;
+     color: rgb(110, 101, 101);
+     align-self: start;
+ }

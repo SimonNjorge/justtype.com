@@ -1,0 +1,28 @@
+
+@media screen and (max-width: 1010px) {
+    .sidebar{
+    flex-direction: row;
+    right: 2%;
+    top: -14%;
+    height: 50px;
+    z-index: 1;
+    }
+    .sidebar .current-pg{
+        height: 40px;
+    }
+    .sidebar a button{
+        height: 40px;
+    }
+    .set-sess-dur-sec, .daily-goal-section, .stp-on-err, .ltr-emmtr{
+        left: 12%;
+    }
+    .sidebar-left{
+        left: 0;
+    }
+    .word-section{
+        min-width: 430px;
+    }
+    .sidebar div a button {
+        font-size: 12px;
+    }
+   }

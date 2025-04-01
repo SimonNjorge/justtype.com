@@ -1,0 +1,102 @@
+#cursor{
+    border-top: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    width: 25px;
+    height: 25px;
+    transform: translate(-1px, 5px) rotate(15deg);
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+  }
+  body:hover #cursor{
+    transform: translate(-1px,5px) scale(1);
+}
+  #cursor::before{
+      content: '';
+      width: 1px;
+      height: 40px;
+      transform: rotate(315deg);
+      background-color: rgb(2, 2, 2) ;
+      position: absolute;
+      left: 12px;
+      top: -8px;
+      pointer-events: none;
+  
+  }
+.el{
+    color: rgb(62, 56, 43);
+    display: flex;
+    transition: 1s;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16x;
+    border-radius: 50%;
+    z-index: 20;
+    background-color: rgb(86, 195, 212);
+}
+.ltr-emmtr .tool-tip{
+    position: absolute;
+    left: 60px;
+    font-size: small;
+    top: 2px;
+}
+.ltr-emmtr{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2%;
+    font-size: small;
+    color: rgb(19, 20, 20);
+    left: 18%;
+    cursor: pointer;
+}
+.ltr-emmtr:hover .tool-tip{
+    opacity: 1;
+    transition: .5s;
+}
+.emtr-c-b{
+    cursor: pointer;
+}
+.emtr-c-b:focus{
+    outline: none;
+}
+/*
+body:hover #cursor{
+    transform: translate(-1px,5px) scale(1);
+}
+#cursor{
+  border-top: 1px solid rgb(6, 79, 206);
+  border-left: 1px solid rgb(99, 16, 224);
+  width: 25px;
+  height: 25px;
+  transform: translate(-1px, 5px) rotate(15deg);
+  position: fixed;
+  pointer-events: none;
+}
+#cursor::before{
+    content: '';
+    width: 1px;
+    height: 40px;
+    transform: rotate(315deg);
+    background-color: rgb(17, 14, 242) ;
+    position: absolute;
+    left: 12px;
+    top: -8px;
+    pointer-events: none;
+
+}
+.el{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    color: white;
+    background-colorgb(11, 49, 241);
+    pointer-events: none;
+    transition: 1s;
+    filter:drop-shadow(0 0 35px green) brightness(99%);
+}
+    */
+
