@@ -26,3 +26,8 @@
         font-size: 12px;
     }
    }
+@media(max-width: 900px){
+    .sidebar-left{
+        display: none;
+    }
+}
