@@ -4,7 +4,7 @@ body {
  }
      
  main{
-     height: 680px;
+     height: 710px;
      width: 1000px;
      display: flex;
      flex-direction: column;
