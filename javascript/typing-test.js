@@ -787,7 +787,7 @@ strtTestBtn.addEventListener('click', ()=>{
    strtTestBtn.innerHTML = '';
    strtTestBtn.style.display = 'none';
   }, 2000);
-  bodyClickOnsessionCtrl();
+  //bodyClickOnsessionCtrl();
 });
 
 testRstrtBtn.addEventListener('click', ()=>{
@@ -817,5 +817,5 @@ document.body.addEventListener('keydown', (event)=>{
         strtTestBtn.innerHTML = '';
       }, 2000);
     };
-    bodyClickOnsessionCtrl();
+    //bodyClickOnsessionCtrl();
 });
