@@ -30,9 +30,6 @@
     .sidebar-left{
         display: none;
     }
-    .page-title{
-        display: none
-    }
 }
 @media(max-width: 600px){
     .page-title{
