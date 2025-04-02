@@ -859,7 +859,7 @@ strt.addEventListener('click', ()=>{
 
   clearTimeout(chrActvMssgToId);
   chrActvMssgToId = setTimeout(()=>{strt.style.display = 'none'}, 2000);
-  bodyClickOnsessionCtrl();
+  //bodyClickOnsessionCtrl();
  });
 
 function speedCalc (){
@@ -899,7 +899,7 @@ document.body.addEventListener('keydown', (event)=>{
         }; 
       }, 1000);
   };
-  bodyClickOnsessionCtrl();
+ // bodyClickOnsessionCtrl();
 });
 
 /*
