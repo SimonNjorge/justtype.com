@@ -277,7 +277,7 @@ main{
     padding-left: 2px;
     font-size: 2vh;
     top: 17%;
-    overflow: scroll;
+    overflow: hidden;
     left: 18%;
 }
 .bravo-m{
