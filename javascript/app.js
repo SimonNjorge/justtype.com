@@ -642,6 +642,7 @@ function selectChardivs () {
   charDivs.forEach((charDiv, index) => {
     charDiv.setAttribute('tabindex', `${index}`);
     charDiv.addEventListener('keydown', (event)=>{ 
+       focusIndicator();
       if (!missedChar && event.key == event.target.textContent) {
           if(event.key == " ") {
             event.target.style.backgroundColor = 'gray';
@@ -752,6 +753,7 @@ function reloader (){
     speedSec.classList.remove('speed-acc-active');
     accuracySec.classList.remove('speed-acc-active');
     startPractising();
+   focusIndicator();
     clearTimeout(timeOutId);
     timeOutId = setTimeout(()=>{
       //wordsHtml = '';
@@ -780,20 +782,19 @@ function reloader (){
 };
 
 function focusIndicator(){
-  charDivs[i].addEventListener('focus',()=>{
     clearInterval(indctrIntvlId);
      indctrIntvlId = setInterval(()=>{
       charDivs[i].style.opacity = 0.3;
       clearTimeout(indctrToId);
       indctrToId = setTimeout(()=>{
         charDivs[i].style.opacity = 1;
-      }, 500)
+      }, 500);
      }, 1000);
-  });
 };
 let started = false;
 function startInitialiser(){
   selectChardivs();
+   focusIndicator();
   charDivs[0].focus();
   i = 0;
   wrongLetters = 0;
