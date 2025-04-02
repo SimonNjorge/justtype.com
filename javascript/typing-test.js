@@ -625,6 +625,7 @@ function selectChardivs () {
     charDivs.forEach((charDiv, index) => {
       charDiv.setAttribute('tabindex', `${index}`);
       charDiv.addEventListener('keydown', (event)=>{  
+           focusIndicator();
         if (!missedChar && event.key == event.target.textContent) {
             if(event.key == " ") {
               event.target.style.backgroundColor = 'gray';
@@ -707,6 +708,7 @@ function reloader (){
     speedSec.classList.remove('speed-acc-active');
     accuracySec.classList.remove('speed-acc-active');
     startTest();
+     focusIndicator();
     clearTimeout(timeOutId);
     timeOutId = setTimeout(()=>{
       document.querySelector('.js-word-section')
@@ -725,7 +727,6 @@ function reloader (){
 };
 
 function focusIndicator(){
-  charDivs[i].addEventListener('focus',()=>{
     clearInterval(indctrIntvlId);
      indctrIntvlId = setInterval(()=>{
       charDivs[i].style.opacity = 0.3;
@@ -734,7 +735,6 @@ function focusIndicator(){
         charDivs[i].style.opacity = 1;
       }, 500)
      }, 1000);
-  });
 };
 let started = false;
 function startInitialiser(){
@@ -751,6 +751,7 @@ function startInitialiser(){
 
   i = 0;
   selectChardivs();
+  focusIndicator();
   charDivs[0].focus();
 
   clearTimeout(timeOutId);
