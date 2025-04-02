@@ -55,6 +55,7 @@
     top: 25%;
     left: 3%;
     width: 120px;
+    overflow: hidden;
     height: 280px;
     font-size: 2vh;
     background-color:  rgb(217, 241, 245);
