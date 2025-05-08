@@ -794,7 +794,7 @@ function focusIndicator(){
 let started = false;
 function startInitialiser(){
   selectChardivs();
-   focusIndicator();
+  focusIndicator();
   charDivs[0].focus();
   i = 0;
   wrongLetters = 0;
