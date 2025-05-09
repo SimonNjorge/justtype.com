@@ -36,3 +36,65 @@
         display: none;
     }    
 }
+@media screen and (max-width: 250px) {
+    .page-title{
+        display: flex;
+        top: -55%;
+    }
+    main{
+        height: 300px;
+        margin-top: 160px;
+    }
+    .word-section{
+        overflow: hidden;
+        width: 250px;
+        min-width: 260px;
+        max-height: 90px;
+    }
+    .word-section-cont{
+        margin-top: 75px;
+    }
+    .current-ltrs{
+        display: none;
+    }
+    .key-sec{
+        display: none;
+    }
+    .all-ltrs{
+        display: none;
+    }
+    .keyboard-section{
+        display: none;
+    }
+    .bottom-section{
+        display: grid;
+        font-size: small;
+        height: 170px;
+        padding: 8px;
+        bottom: -65%;
+        left: 2%;
+        right: 2%;
+        grid-template-columns: 1fr;
+    }
+    .sidebar{
+        display: grid;
+        left: 2%;
+        right: 2%;
+        margin-top: 5px;
+        top: -38%;
+        height: 100px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .accuracy-txt, .speed-txt{
+        right: 22%;
+    }
+    .gth{
+        width: auto;
+    }
+    .daily-goal-section{
+        margin-top: 6px;
+    }
+    .support a button{
+        font-size: small;
+    }
+}
