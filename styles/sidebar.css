@@ -53,14 +53,14 @@
     justify-content: space-evenly;
     position: absolute;
     top: 25%;
-    left: 3%;
+    left: 6%;
     width: 120px;
     overflow: hidden;
-    height: 280px;
+    height: 250px;
     font-size: 12px;
     background-color:  rgb(217, 241, 245);
     border: 1px solid rgb(164, 157, 157);
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     color: rgb(10, 8, 10);
     cursor: pointer;
 }
@@ -80,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    bottom: -15%;
+    bottom: -13%;
     left: 5%;
     right: 5%;
     height: 50px;
