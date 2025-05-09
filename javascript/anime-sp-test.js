@@ -1,5 +1,5 @@
 let ltrEChckBox = document.querySelector('.js-ltr-emmtr');
-let ltrEmmiter = true;
+let ltrEmmiter = false;
 ltrEChckBox.addEventListener('change', ()=>{
     ltrEmmiter = ltrEChckBox.checked ? true : false;
 }) 

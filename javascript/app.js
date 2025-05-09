@@ -584,18 +584,21 @@ let i = 0;
 let chrActvMssgToId;
 let stopOnError = true;
 let stpOnErrChck = document.querySelector('.js-stp-on-err-chck');
-stpOnErrChck.addEventListener('change', ()=>{
-  stopOnError = stpOnErrChck.checked ? true : false;
-  reloader();
+function timerUpdater(){
   timer.innerHTML = time;
   timer.style.opacity = 1;
-  clearInterval(intervalId);
-  intervalId = setInterval(()=>{
+  clearInterval(timerIntervalId);
+  timerIntervalId = setInterval(()=>{
     if(timer.innerHTML > 0) {
       timer.innerHTML -= 1;
     }
     
   }, 1000);
+};
+stpOnErrChck.addEventListener('change', ()=>{
+  stopOnError = stpOnErrChck.checked ? true : false;
+  reloader();
+  timerUpdater();
   strt.style.display = 'inline';
   strt.innerHTML = 'chars active!';
   clearTimeout(chrActvMssgToId);
@@ -642,7 +645,7 @@ function selectChardivs () {
   charDivs.forEach((charDiv, index) => {
     charDiv.setAttribute('tabindex', `${index}`);
     charDiv.addEventListener('keydown', (event)=>{ 
-       focusIndicator();
+      focusIndicator();
       if (!missedChar && event.key == event.target.textContent) {
           if(event.key == " ") {
             event.target.style.backgroundColor = 'gray';
@@ -703,6 +706,11 @@ function selectChardivs () {
       calibrater();
       pgrsLiveWidthCalc(totalCharsPrsd + JSON.parse(localStorage.getItem('totalCharsPrsd')));
     });
+    /*
+    charDiv.addEventListener('blur', () => {
+     console.log(index, 'i was blurred')
+    });
+    */
   });
 };
 
@@ -713,9 +721,10 @@ selEl.addEventListener('change', ()=>{
 let timer = document.querySelector('.js-timer');
 let timeOutId;
 let time = selEl.value * 60;
-let intervalId;
+let timerIntervalId;
 let indctrIntvlId;
 let indctrToId;
+let onSession = false;
 
 timer.innerHTML = time;
 let speedSec = document.querySelector('.js-speed-sec');
@@ -753,7 +762,7 @@ function reloader (){
     speedSec.classList.remove('speed-acc-active');
     accuracySec.classList.remove('speed-acc-active');
     startPractising();
-   focusIndicator();
+    focusIndicator();
     clearTimeout(timeOutId);
     timeOutId = setTimeout(()=>{
       //wordsHtml = '';
@@ -825,22 +834,22 @@ function startInitialiser(){
     }, time * 1000);
     started = true;
 };
-
+/*
 function bodyClickOnsessionCtrl(){
-  document.body.addEventListener('click',()=>{
-    i = 0;
-    timer.innerHTML = time;
-    timer.style.opacity = 1;
-    clearInterval(intervalId);
-    intervalId = setInterval(()=>{
-      if(timer.innerHTML > 0) {
-        timer.innerHTML -= 1;
-      }; 
-    }, 1000);
-    reloader();
-  });
+  document.body.addEventListener('click', ()=>{
+    if (onSession) {
+      charDivs[i].addEventListener('blur', ()=>{
+        console.log('i was blurred')
+      });
+      //clearInterval(timerIntervalId);
+      console.log('clicked');
+      //i = 0;
+      //timerUpdater();
+      //reloader();
+    };
+ });
 };
-
+*/
 strt.addEventListener('click', ()=>{
   //reloader();
   if(started){
@@ -848,16 +857,9 @@ strt.addEventListener('click', ()=>{
   } else{
     startInitialiser();
   };
-  timer.innerHTML = time;
-  timer.style.opacity = 1;
-  clearInterval(intervalId);
-  intervalId = setInterval(()=>{
-    if(timer.innerHTML > 0) {
-      timer.innerHTML -= 1;
-    };
-  }, 1000);
+  //onSession = true;
+  timerUpdater();
   strt.innerHTML = 'chars active!';
-
   clearTimeout(chrActvMssgToId);
   chrActvMssgToId = setTimeout(()=>{strt.style.display = 'none'}, 2000);
   //bodyClickOnsessionCtrl();
@@ -884,6 +886,7 @@ document.body.addEventListener('keydown', (event)=>{
     } else{
       startInitialiser();
     };
+    //onSession = true;
     i = 0;
     strt.style.display = 'inline';
     strt.innerHTML = 'chars active!';
@@ -891,16 +894,8 @@ document.body.addEventListener('keydown', (event)=>{
     clearTimeout(chrActvMssgToId);
     chrActvMssgToId = setTimeout(()=>{
       strt.style.display = 'none'}, 2000);
-      timer.innerHTML = time;
-      timer.style.opacity = 1;
-      clearInterval(intervalId);
-      intervalId = setInterval(()=>{
-        if(timer.innerHTML > 0) {
-          timer.innerHTML -= 1;
-        }; 
-      }, 1000);
+    timerUpdater();
   };
- // bodyClickOnsessionCtrl();
 });
 
 /*
@@ -910,14 +905,8 @@ and displays the text 'chars active, start typing!'
  */
 restartBtn.addEventListener('click', ()=>{
   reloader();
-  timer.innerHTML = time;
-  timer.style.opacity = 1;
-  clearInterval(intervalId);
-  intervalId = setInterval(()=>{
-    if(timer.innerHTML > 0) {
-      timer.innerHTML -= 1;
-    };
-  }, 1000);
+  timerUpdater();
+  //onSession = true;
   strt.style.display = 'inline';
 });
 

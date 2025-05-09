@@ -64,6 +64,12 @@
     color: rgb(10, 8, 10);
     cursor: pointer;
 }
+.sidebar-left ul{
+    margin-top: 0;
+}
+.sidebar-left ul li{
+    margin: 4px;
+}
 .swtch-infor{
     font-size: 1.9vh;
     color: rgb(123, 120, 120);
@@ -80,7 +86,7 @@
     height: 50px;
     border: 1px solid rgb(188, 186, 186);
     border-radius: 40px;
-    box-shadow: inset 2px 2px rgb(193, 188, 188);
+    box-shadow: inset 1px 1px 7px rgb(193, 188, 188);
 }
 .gth{
     width: 100px;
@@ -107,7 +113,7 @@
     background-color:  rgb(209, 243, 249);
 }
 .gth:hover, .support:hover, .contact:hover{
-    background-color: rgb(236, 255, 158);
+    background-color: rgb(255, 255, 0);
     border: 1px solid rgb(173, 172, 172);
 }
 .support a button{

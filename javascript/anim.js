@@ -3,10 +3,10 @@ let kbrd = document.querySelector('.js-kb');
 let cursor = document.querySelector('#cursor');
 let sidebar = document.querySelector('.js-sidebar');
 let ltrEChckBox = document.querySelector('.js-ltr-emmtr');
-let ltrEmmiter = true;
+let ltrEmmiter = false;
 ltrEChckBox.addEventListener('change', ()=>{
     ltrEmmiter = ltrEChckBox.checked ? true : false;
-}) 
+}); 
 body.addEventListener('mousemove', (e)=>{
     if(ltrEmmiter){
         animate(e);
