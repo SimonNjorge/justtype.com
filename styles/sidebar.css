@@ -1,11 +1,14 @@
-
+:root{
+    --main-bg:  rgb(204, 231, 233);
+    --section-bg: rgb(217, 241, 245);
+}
 .sidebar{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
-    background-color:  rgb(217, 241, 245); 
+    background-color:  var(--section-bg); 
     top: 17%;
     right: 3%;
     height: 250px;
@@ -14,7 +17,7 @@
     color: rgb(93, 80, 91);
 }
 .sidebar .current-pg{
-    background-color:  rgb(39, 164, 247);
+    background-color: rgb(39, 164, 247);
     display: flex;
     font-size: small;
     align-items: center;
@@ -58,7 +61,7 @@
     overflow: hidden;
     height: 280px;
     font-size: 12px;
-    background-color:  rgb(217, 241, 245);
+    background-color: var(--section-bg);
     border: 1px solid rgb(164, 157, 157);
     border-top-left-radius: 10px;
     color: rgb(10, 8, 10);
@@ -70,7 +73,7 @@
 }
 .bottom-section{
     position: absolute;
-    background-color: rgb(204, 231, 233);;
+    background-color: var(--main-bg);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -80,7 +83,7 @@
     height: 50px;
     border: 1px solid rgb(188, 186, 186);
     border-radius: 40px;
-    box-shadow: inset 2px 2px rgb(193, 188, 188);
+    box-shadow: inset 1px 1px 2px rgb(193, 188, 188);
 }
 .gth{
     width: 100px;
@@ -104,7 +107,7 @@
     align-items: center;
     justify-content: center;
     height: 35px;
-    background-color:  rgb(209, 243, 249);
+    background-color: var(--section-bg);
 }
 .gth:hover, .support:hover, .contact:hover{
     background-color: rgb(236, 255, 158);

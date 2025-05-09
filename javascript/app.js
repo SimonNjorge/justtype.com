@@ -920,6 +920,27 @@ restartBtn.addEventListener('click', ()=>{
   }, 1000);
   strt.style.display = 'inline';
 });
+//theme toggler
+//console.log(document.documentElement.getAttribute('data-theme'));
+
+let themeToggler = document.querySelector('.js-theme-tg');
+let currentTheme = document.documentElement.getAttribute('data-theme');
+themeToggler.addEventListener('click', ()=>{
+  if (currentTheme == 'light') {
+    //document.documentElement.setAttribute('data-theme', 'black' )
+    currentTheme = 'black';
+    document.documentElement.style.setProperty('--body-bg', 'black');
+    document.documentElement.style.setProperty('--main-bg', 'rgb(105,105,105)');
+    document.documentElement.style.setProperty('--section-bg', 'rgb(169,169,169)');
+    body.style.color = 'white';
+  } else {
+    document.documentElement.style.setProperty('--body-bg', 'rgb(215,239,246)');
+    document.documentElement.style.setProperty('--main-bg', 'rgb(204,231,233)');
+    document.documentElement.style.setProperty('--section-bg', 'rgb(217,241,245)');
+    body.style.color= ''
+    currentTheme = 'light';
+  };
+});
 
 
 

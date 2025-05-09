@@ -1,6 +1,11 @@
+:root{
+    --main-bg:  rgb(204, 231, 233);
+    --body-bg:   rgb(215, 239, 246);
+    --section-bg: rgb(217, 241, 245);
+}
 body {
    font-family: Arial, Helvetica, sans-serif; 
-   background-color: rgb(215, 239, 246);
+   background-color: var(--body-bg);
 }   
 main{
     margin-top: 70px;
@@ -10,9 +15,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(204, 231, 233);
+    background-color: var(--main-bg);
     border-radius: 8px;
-    box-shadow: inset 2px 2px rgb(193, 188, 188);
+    box-shadow: inset 1px 1px 2px rgb(193, 188, 188);
 }
 .page-title {
     position: absolute;
@@ -21,8 +26,8 @@ main{
     justify-content: center;
     top: -15%;
     left: 2px;
-    color:  rgb(39, 164, 247);
-    background-color:  rgb(217, 241, 245); 
+    color: rgb(39, 164, 247);
+    background-color: var(--section-bg); 
     font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
     padding: 4px;
@@ -30,6 +35,14 @@ main{
     border: 1px solid rgb(206, 206, 206);
     border-radius: 5px;
 } 
+.theme-tg{
+    position: absolute;
+    background-color: var(--section-bg);
+    border: 1px solid gray;
+    cursor: pointer;
+    top: -12%;
+    right: 0;
+}
 .page-title:hover{
     border: 1px solid rgb(165, 163, 163);
     cursor: pointer;
@@ -68,7 +81,7 @@ main{
     width: 80px;
     height: 18px;
     border: 1px solid rgb(20, 20, 20);
-    background-color:  rgb(217, 241, 245);;
+    background-color:  var(--section-bg);
     border: 1px solid gray;
     border-left: none;
 }
@@ -156,7 +169,7 @@ main{
     height: 200px;
     width: 650px;
     position: relative;
-    background-color: rgb(217, 241, 245); 
+    background-color: var(--section-bg);
     border: 1px solid rgb(11, 10, 10);
     border-radius: 8px;
     display: flex;
@@ -183,7 +196,7 @@ main{
     height: 18px;
     padding: 4px;
     color: rgb(110, 101, 101);
-    background-color:  rgb(217, 241, 245); ;
+    background-color: var(--section-bg);
     border: 1px solid rgb(202, 200, 200);
     border-radius: 4px;
     cursor: pointer; 
@@ -231,6 +244,7 @@ main{
 .stp-on-err input:focus-visible {
     outline: none;
 }
+
 .set-sess-dur-sec{
     position: absolute;
     display: flex;
@@ -271,7 +285,7 @@ main{
     height: 18px;
     width: 260px;
     border: 1px solid rgb(20, 20, 20);
-    background-color:  rgb(217, 241, 245);
+    background-color: var(--section-bg);
     border-radius: 2px;
     margin: 2px;
     padding-left: 2px;
@@ -292,7 +306,7 @@ main{
     white-space: wrap;
     font-size: 10px;
     bottom: 25px;
-    background-color: rgb(217, 241, 245);
+    background-color: var(--section-bg);
     left: 68%;
     display: none;
     transition: 1s;
@@ -385,7 +399,7 @@ main{
     width: 80px;
     font-size: large;
     font-weight: bold;
-    background-color: rgb(204, 231, 233);
+    background-color: var(--main-bg);
     color: rgb(118, 60, 131);
     position: absolute;
     right: 3%;
@@ -399,7 +413,7 @@ main{
     width: 80px;
     font-size: large;
     font-weight: bold;
-    background-color:rgb(204, 231, 233);
+    background-color: var(--main-bg);
     color: rgb(118, 60, 131);
     position: absolute;
     border: 1px solid rgb(153, 144, 144);
