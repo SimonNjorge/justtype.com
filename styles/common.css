@@ -34,3 +34,14 @@ body {
      color: rgb(110, 101, 101);
      align-self: start;
  }
+@media screen and (max-width: 600px){
+    main{
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        padding-top: 45px;
+    }
+}

@@ -97,4 +97,11 @@
     .support a button{
         font-size: small;
     }
+    .timer{
+      top: -38%;  
+      right: 1%;
+    }
+    .daily-goal-section, .set-sess-dur-sec, .stp-on-err, .ltr-emmtr{
+        left: 1%;
+    }
 }
