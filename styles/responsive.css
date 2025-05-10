@@ -39,11 +39,11 @@
 @media screen and (max-width: 600px) {
     .page-title{
         display: flex;
-        top: -55%;
+        top: -65%;
     }
     main{
         height: 300px;
-        margin-top: 160px;
+        margin-top: 200px;
     }
     .word-section{
         overflow: hidden;
@@ -81,7 +81,7 @@
         left: 2%;
         right: 2%;
         margin-top: 5px;
-        top: -38%;
+        top: -48%;
         height: 100px;
         grid-template-columns: 1fr 1fr;
     }
@@ -103,5 +103,8 @@
     }
     .daily-goal-section, .set-sess-dur-sec, .stp-on-err, .ltr-emmtr{
         left: 1%;
+    }
+    body{
+        padding-bottom: 250px;
     }
 }
