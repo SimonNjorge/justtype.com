@@ -85,6 +85,7 @@
     right: 5%;
     font-size: small;
     height: 50px;
+    padding: 4px;
     border: 1px solid rgb(188, 186, 186);
     border-radius: 40px;
     box-shadow: inset 1px 1px 7px rgb(193, 188, 188);
