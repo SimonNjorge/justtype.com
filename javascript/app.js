@@ -27,7 +27,7 @@ function createCombinations () {
     let newComb = '';
     let combs = [];
     let wordHtml = '';
-    for (let i = 0; i <=20;) {
+    for (let i = 0; i <=12;) {
       let startIndex = Math.floor(Math.random()*10);
       let endIndex = Math.floor(Math.random()*10);
       if (

@@ -37,20 +37,19 @@
     background-color: rgb(86, 195, 212);
 }
 .ltr-emmtr .tool-tip{
-    position: absolute;
-    left: 60px;
+   /* position: absolute;
+    left: 60px;*/
     font-size: small;
     top: 2px;
 }
 .ltr-emmtr{
     /*position: absolute;*/
+    postion: relative;
+    padding-left: 6px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    top: 0;
     font-size: 12px;
     color: rgb(19, 20, 20);
-    left: 18%;
     cursor: pointer;
 }
 .ltr-emmtr:hover .tool-tip{
