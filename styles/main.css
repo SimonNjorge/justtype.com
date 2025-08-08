@@ -5,48 +5,54 @@ body {
 main{
     margin-top: 50px;
     margin-left: 10px;
-    position: relative;
+    /*position: relative;*/
     height: 410px;
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     background-color: rgb(204, 231, 233);
     border-radius: 8px;
     box-shadow: inset 1px 1px 3px rgb(193, 188, 188);
 }
-.page-title {
-    position: absolute;
+.page-header {
+    /*position: absolute;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    top: -13%;
-    left: 2px;
-    height: 40px;
-    border-radius: 4px;
+    justify-content: space-between;
+    /*top: -13%;
+    left: 2px;*/
+    height: 50px;
     padding-left: 6px;
     padding-right: 6px;
-    margin-top: 10px;
+    background-color: aqua;
     color:  rgb(39, 164, 247);
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
 } 
-
+.menu{
+    width: 30px;
+}
+.menu img{
+    width: 100%;
+}
 .page-title:hover{
     cursor: pointer;
     background-color: rgb(246, 251, 255);
 }
 .all-ltrs{
-    position: absolute;
+   /* position: absolute;*/
     display: flex;
     flex-flow: row wrap;
-    left: 50%;
-    top: 1%;
     height: 80px;
     width: 368px;
     border: none;
 }  
 .current-ltrs{
-    position: absolute;
+    /*position: absolute;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +91,7 @@ main{
     align-items: center;
 }
 .key-sec{
-    position: absolute;
+   /* position: absolute;*/
     display: flex;
     left: 50%;
     top: 9%;
@@ -135,22 +141,22 @@ main{
     border-radius: 50%;
 }
 .all-ltrs p{
-    position: absolute;
+    /*position: absolute;
     top: -16%;
-    left: -17%;
+    left: -17%;*/
     font-size: small;
 }
-.all-ltrs .clbrtn{
+.all-ltrs .clbrtn{/*
     position: absolute;
     top: 2%;
-    left: -19%;
+    left: -19%;*/
     font-size: small;
 }
 .clbrtn{margin-top: 15px;}
 .key{
-    position: absolute;
+   /* position: absolute;
     top: 39%;
-    left: -9%;
+    left: -9%;*/
     width: 200px;
     font-size: small;
 }
@@ -208,7 +214,7 @@ main{
     background-color: rgb(155, 205, 205);   
 }
 .stp-on-err{
-    position: absolute;
+    /*position: absolute;*/
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -234,7 +240,7 @@ main{
     outline: none;
 }
 .set-sess-dur-sec{
-    position: absolute;
+    /*position: absolute;*/
     display: flex;
     cursor: pointer;
     font-size: 12px;
@@ -267,7 +273,7 @@ main{
     outline: none;
 }
 .daily-goal-section {
-    position: absolute;
+    /*position: absolute;*/
     display: flex;
     align-items: center;
     height: 18px;
@@ -283,7 +289,7 @@ main{
     left: 18%;
 }
 .bravo-m{
-    position: absolute;
+   /* position: absolute;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,7 +327,7 @@ main{
 }
 .click-to-strt-btn, .chars-actv-msg{
     cursor: pointer;
-    position: absolute;
+    /*position: absolute;*/
     border: none;
     font-size: 2.5vmin;
     color:white;
@@ -337,7 +343,7 @@ main{
 }
 .timer {
     opacity: 0;
-    position: absolute;
+    /*position: absolute;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -418,18 +424,18 @@ main{
     justify-content: center;
 }
 .accuracy-txt{
-    position: absolute;
+    /*position: absolute;
     right: 17%;
-    top: 56%;
+    top: 56%;*/
     color: rgb(29, 29, 27);
     display: none;
     font-size: larger;
     font-weight: lighter;
 }
 .speed-txt{
-    position: absolute;
+   /* position: absolute;
     right: 17%;
-    top: 10%;
+    top: 10%;*/
     color: rgb(29, 29, 27);
     font-weight: lighter;
     font-size: larger;
