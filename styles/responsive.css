@@ -1,4 +1,14 @@
-
+@media(max-width:740px){
+    .utils-sec{
+        flex-direction: column;
+    }
+}
+@media(max-width:540px){
+    .keyboard span{
+    
+    }
+}
+/*
 @media screen and (max-width: 1010px) {
     .sidebar{
     flex-direction: row;
@@ -14,7 +24,7 @@
         height: 40px;
     }
     .set-sess-dur-sec, .daily-goal-section, .stp-on-err, .ltr-emmtr{
-        left: 12%;
+        lft: 12%;
     }
     .sidebar-left{
         left: 0;
@@ -105,3 +115,4 @@
         padding-bottom: 250px;
     }
 }
+*/

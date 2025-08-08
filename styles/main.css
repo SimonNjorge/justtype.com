@@ -1,15 +1,16 @@
 body {
    font-family: Arial, Helvetica, sans-serif; 
    background-color: rgb(215, 239, 246);
-   overflow: hidden;
+   overflow: scroll;
 }   
 main{
     margin-top: 60px;
     margin-left: 10px;
     padding: 12px;
-    background-color: rgb(204, 231, 233);
+    background-color: rgb(193, 224, 226);
     border-radius: 8px;
-    box-shadow: inset 1px 1px 3px rgb(193, 188, 188);
+    border: 1px solid gray;
+    /*box-shadow: inset 1px 1px 3px rgb(193, 188, 188);*/
 }
 .main-section{
     display: flex;
@@ -20,6 +21,7 @@ main{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 12;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,10 +68,6 @@ main{
 .current-ltrs div{
     font-size: small;
     cursor: pointer;
-}
-.current-ltrs:hover .tool-tip{
-    opacity: 1;
-    transition: .5s;
 }
 .c-ltrs{
     display: flex;
@@ -227,26 +225,13 @@ main{
     height: 1px;
     background-color: rgb(155, 205, 205);   
 }
-.stp-on-err p, .set-sess-dur-sec p{
-    margin: 7px;
-}
 .stp-on-err{
     display: flex;
+    width: 140px;
+    position: relative;
     cursor: pointer;
     align-items: center;
-    top: 3%;
-    left: 18%;
     font-size: 12px;
-}
-.stp-on-err .tool-tip{
-    position: absolute;
-    left: 70px;
-    top: -6px;
-    font-size: small;
-}
-.stp-on-err:hover .tool-tip{
-    opacity: 1;
-    transition: .5s;
 }
 .stpIn{
     cursor: pointer;
@@ -257,28 +242,22 @@ main{
 }
 .set-sess-dur-sec{
     display: flex;
+    position: relative;
     cursor: pointer;
+    width: 210px;
     font-size: 12px;
-    top: 9%;
-    left: 18%;
 }
-.set-sess-dur-sec .tool-tip{
-    position: absolute;
-    left: 108px;
-    top: -11px;
+.stp-on-err p, .set-sess-dur-sec p,
+.ltr-emmtr p{
+    margin: 5px;
 }
-.set-sess-dur-sec:hover .tool-tip{
-    opacity: 1;
-    transition: .5s;
-}
-
 #select{
     background-color: rgb(39, 164, 247);
     color: white;
     align-self: center;
-    font-size: 2.5vh;
+    font-size: 13px;
     display: flex;
-    height: 15px;
+    height: 25px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -299,12 +278,9 @@ main{
     margin-top: 8px;
     padding-left: 2px;
     font-size: 10px;
-    top: 17%;
     overflow: hidden;
-    left: 18%;
 }
 .bravo-m{
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +318,6 @@ main{
 }
 .click-to-strt-btn, .chars-actv-msg{
     cursor: pointer;
-    /*position: absolute;*/
     border: none;
     font-size: .8em;
     height: 24px;
@@ -374,26 +349,26 @@ main{
     top: -45%;
     right: 0;
 }
-.click-to-strt-btn:hover .tool-tip{
-    opacity: 1;
-    transition: 0.8s;
-}
-.restart-btn{
-    background-color: rgb(221, 249, 250);
-    border-radius: 4px;
-}
+
+.ltr-emmtr:hover .tool-tip,
+.current-ltrs:hover .tool-tip,
+.stp-on-err:hover .tool-tip,
+.set-sess-dur-sec:hover .tool-tip,
+.set-sess-dur-sec:hover .tool-tip,
+.click-to-strt-btn:hover .tool-tip,
 .restart-btn:hover .tool-tip{
     opacity: 1;
-    transition: 0.7s;
 }
 .tool-tip{
     pointer-events: none;
     position: absolute;
+    bottom: -25px;
     z-index: 12;
     color: white;
     background-color: gray;
     padding: 4px;
     border-radius: 4px;
+    transition: 0.7s;
     opacity: 0;
     white-space: nowrap;
 }
@@ -401,8 +376,8 @@ main{
     position: absolute;
     left: 50%;
     top: 50% ;
-    transform: translate(180%, -50%);
-    background-color: rgb(221, 249, 250);
+    transform: translate(-50%, -50%);
+    background-color: rgb(204, 231, 233);
     border-radius: 4px;
     border: none;
     display: none;
@@ -410,21 +385,16 @@ main{
 }
 .accuracy-speed-cont{
     display: flex;
+    flex-grow: 1;
+   
     justify-content: space-between;
-    max-width: 700px;
     column-gap: 4px;
 }
-.speed-sec-cont{/*
-    position: absolute;
-    right: 3%;
-    top: 4%;*/
+.speed-sec-cont{
     display: flex;
     align-items: center;
 }
-.accuracy-sec-cont{/*
-    position: absolute;
-    right: 3%;
-    top: 50%;*/
+.accuracy-sec-cont{
     display: flex;
     align-items: center;
 }

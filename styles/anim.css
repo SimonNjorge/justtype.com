@@ -36,25 +36,16 @@
     z-index: 20;
     background-color: rgb(86, 195, 212);
 }
-.ltr-emmtr .tool-tip{
-   /* position: absolute;
-    left: 60px;*/
-    font-size: small;
-    top: 2px;
-}
 .ltr-emmtr{
     /*position: absolute;*/
-    postion: relative;
-    padding-left: 6px;
+    position: relative;
+    
     display: flex;
+    width: 78px;
     align-items: center;
     font-size: 12px;
     color: rgb(19, 20, 20);
     cursor: pointer;
-}
-.ltr-emmtr:hover .tool-tip{
-    opacity: 1;
-    transition: .5s;
 }
 .emtr-c-b{
     cursor: pointer;

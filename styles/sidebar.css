@@ -1,15 +1,16 @@
 
 .sidebar{
     display: flex;
-    display: none;
+    display: n;
     flex-direction: column;
+    row-gap: 10px;
+    padding: 5px;
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
     background-color:  rgb(217, 241, 245); 
-    top: 17%;
-    right: 3%;
-    height: 250px;
+    top: 0%;
+    right: 0%;
     border: 1px solid rgb(164, 157, 157);
     border-radius: 10px;
     color: rgb(93, 80, 91);
@@ -114,7 +115,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
     background-color:  rgb(209, 243, 249);
 }
 .gth:hover, .support:hover, .contact:hover{
@@ -157,8 +157,10 @@
 }
 .keyboard-section{
     /*position: absolute;*/
+    diplay: none;
+    width: 100%;
+    margin-top: 3px;
     align-self: center;
-    width: 500px;
     bottom: 10px;
     border: 1px solid rgb(156, 155, 155);
 }
@@ -171,7 +173,7 @@
     font-size: small;
     color: rgb(81, 75, 75);
     background-color: white;
-    width: 27px;
+    width: 3vw;
     margin-bottom: 3px;
     display: flex;
     align-items: center;
