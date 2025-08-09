@@ -37,7 +37,6 @@
     background-color: rgb(86, 195, 212);
 }
 .ltr-emmtr{
-    /*position: absolute;*/
     position: relative;
     
     display: flex;

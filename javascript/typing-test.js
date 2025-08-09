@@ -31,7 +31,7 @@ let testRstrtBtn = document.querySelector('.js-test-restart-btn');
 let wordHtml = '';
 let wordsHtml = '';
 let startIndex = JSON.parse(localStorage.getItem('strtI')) || 0;
-let endIndex = JSON.parse(localStorage.getItem('endI')) || 17;
+let endIndex = JSON.parse(localStorage.getItem('endI')) || 10;
 function selectWords (){
     let selectedWords = words.slice(startIndex, endIndex);
     selectedWords.forEach( word => {
@@ -49,13 +49,13 @@ function selectWords (){
         `
     });
     if(endIndex < words.length) {
-        startIndex += 17,
-        endIndex += 17;
+        startIndex += 10,
+        endIndex += 10;
         localStorage.setItem('strtI', JSON.stringify(startIndex));
         localStorage.setItem('endI', JSON.stringify(endIndex));
     } else {
       startIndex = 0;
-      endIndex = 17;
+      endIndex = 10;
       localStorage.setItem('strtI', JSON.stringify(startIndex));
       localStorage.setItem('endI', JSON.stringify(endIndex));  
     };
@@ -576,7 +576,7 @@ let missedCharVal = '';
 let stopOnError = true;
 let correctLetters = 0;
 let wrongLetters = 0;
-let stpOnErrChck = document.querySelector('.js-tst-stp-on-err-chck');
+let stpOnErrChck = document.querySelector('.js-stp-on-err-chck')//('.js-tst-stp-on-err-chck');
 stpOnErrChck.addEventListener('change', ()=>{
     stopOnError = stpOnErrChck.checked ? true : false;
     reloader();
@@ -799,6 +799,7 @@ testRstrtBtn.addEventListener('click', ()=>{
    clearTimeout(chrActvMssgTstToId);
    chrActvMssgTstToId = setTimeout(()=>{
    strtTestBtn.innerHTML = '';
+   strtTestBtn.style.display = 'none';
  }, 2000);
  
 });

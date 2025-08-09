@@ -4,24 +4,19 @@ body {
  }
      
  main{
-     height: 710px;
-     width: 1000px;
+     width: 94vw;
      display: flex;
      flex-direction: column;
      margin-top: 70px;
-     margin-left: 10px;
-     position: relative;
+     margin-left: 5px;
      justify-content: center;
      align-items: center;
      background-color: rgb(204, 231, 233);
+     border: 1px solid gray;
      border-radius: 8px;
-     box-shadow: inset 1px 1px 2px rgb(193, 188, 188);
  }
  button{
-     position: absolute;
-     top: 4px;
      cursor: pointer;
-     left: 4px;
      color: white;
      border-radius: 6px;
      border: none;

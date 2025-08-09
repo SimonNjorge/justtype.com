@@ -28,82 +28,86 @@
         <p>
             My home of touch typing
         </p>
-        <div class="menu">
+        <div class="menu js-menu">
             <img src="icons/hamburger-menu.svg" alt="hamburger-menu">
         </div>
         <div class="sidebar js-sidebar">
-                <div>
-                    <div class="icon">
-                        <img src="icons/arrow.png" alt="keyboard icon" class="kb-icon">
-                        <div class="tool-tip">
-                            practice section
-                        </div>
-                    </div>
-                    <div class="current-pg">
-                        <p>typing practice</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <img src="icons/speed.png" alt="speed icon" class="sp-icon">
-                        <div class="tool-tip">
-                            take a speed test
-                    </div>
-                    </div>
-                    <a href="typing-test.html">
-                        <button class="speed-test js-speed-test">
-                            speed test
-                        </button>
-                    </a>
-                </div>
-                <div>
-                    <div class="icon">
-                        <img src="icons/info.png" alt="infor" class="abt-icon">
-                        <div class="tool-tip">
-                            learn more
-                        </div>
-                    </div>
-                    <a href="about.html">
-                        <button>About</button>
-                    </a>
-                </div>
-                <div>
-                    <div class="icon">
-                        <img src="icons/lock-in-a-circle.png" alt="privacy icon" class="pp-icon">
-                        <div class="tool-tip">
-                        privacy policy
-                    </div>
-                    </div>
-                    <a href="privacy.html">
-                        <button>privacy policy & Terms of service</button>
-                    </a>
-                </div>
-                <div class="support">
-                    <a href="support.html">
-                        <button>
-                            Support
-                            <span class="dollar-icon">$</span>
-                            <div class="tool-tip">
-                                <span style="color: rgb(255, 250, 250); font-size: small;">click for more infor</span>
-                            </div>
-                        </button>  
-                    </a>
-                    <!--<span style="color: gray; font-size: small;">(paypal/Mobile Money)</span>-->
-                </div>
-                  <!--
-                <div class="contact">
-                    Contact: <span style="color: gray; font-size: small;"><del>infor@justtype.com</del>/-Tel - 0741404115  (SMS)</span>
+            <div class="sidebar-link">
+                <div class="icon">
+                    <img src="icons/arrow.png" alt="keyboard icon" class="kb-icon">
                     <div class="tool-tip">
-                        <span style="color: rgb(255, 250, 250); font-size: small;">Talk to us</span>
+                        practice section
                     </div>
-                </div>-->
-                <div class="gth">
-                    Github
-                    <div class="tool-tip">
-                    <span style="color: rgb(255, 250, 250); font-size: small;">view source code</span>
-                    </div>
+                </div>
+                <div class="current-pg">
+                    <p>typing practice</p>
                 </div>
             </div>
+            <div class="sidebar-link">
+                <div class="icon">
+                    <img src="icons/speed.png" alt="speed icon" class="sp-icon">
+                    <div class="tool-tip">
+                        take a speed test
+                </div>
+                </div>
+                <a href="typing-test.html">
+                    <button class="speed-test js-speed-test">
+                        speed test
+                    </button>
+                </a>
+            </div>
+            <div class="sidebar-link">
+                <div class="icon">
+                    <img src="icons/info.png" alt="infor" class="abt-icon">
+                    <div class="tool-tip">
+                        learn more
+                    </div>
+                </div>
+                <a href="about.html">
+                    <button>About</button>
+                </a>
+            </div>
+            <div class="sidebar-link">
+                <div class="icon">
+                    <img src="icons/lock-in-a-circle.png" alt="privacy icon" class="pp-icon">
+                    <div class="tool-tip">
+                    privacy policy
+                </div>
+                </div>
+                <a href="privacy.html">
+                    <button>privacy policy & Terms of service</button>
+                </a>
+            </div>
+            <div class="support sidebar-link">
+                <a href="support.html">
+                    <button>
+                        Support
+                        <span class="dollar-icon">$</span>
+                        <div class="tool-tip">
+                            <span style="color: rgb(255, 250, 250); font-size: small;">click for more infor</span>
+                        </div>
+                    </button>  
+                </a>
+                <!--<span style="color: gray; font-size: small;">(paypal/Mobile Money)</span>-->
+            </div>
+                <!--
+            <div class="contact">
+                Contact: <span style="color: gray; font-size: small;"><del>infor@justtype.com</del>/-Tel - 0741404115  (SMS)</span>
+                <div class="tool-tip">
+                    <span style="color: rgb(255, 250, 250); font-size: small;">Talk to us</span>
+                </div>
+            </div>-->
+            <!--
+            <div class="gth sidebar-link">
+                <a href="">
+                    https://github.com/SimonNjorge/justtype.com
+                    <button>Github</button>
+                </a>
+                <div class="tool-tip">
+                    <span style="color: rgb(255, 250, 250); font-size: small;">source code available soon</span>
+                </div>
+            </div>-->
+        </div>
     </section>
     <div id="cursor"></div>
     <main>
@@ -214,6 +218,9 @@
                         click to start
                         <div class="tool-tip">click or press Enter to start</div>
                     </button>
+                    <div class="focus-checker focus-checker-hidden js-focus-checker">
+                        Focus lost, press enter to start again
+                    </div>
                 </div>
                
                 <div class="word-section-cont js-word-cont">
@@ -271,37 +278,10 @@
                 </div>
             </section>
         </section>
-
-        <section class="bottom-section">
-            <div class="support">
-                <a href="support.html">
-                    <button>
-                        Support
-                        <span class="dollar-icon">$</span>
-                        <div class="tool-tip">
-                            <span style="color: rgb(255, 250, 250); font-size: small;">click for more infor</span>
-                        </div>
-                    </button>  
-                </a>
-                <span style="color: gray; font-size: small;">(paypal/Mobile Money)</span>
-            </div>
-                
-            <div class="contact">
-                Contact:<!-- <span style="color: gray; font-size: small;"><del>infor@justtype.com</del>/-->Tel - 0741404115  (SMS)</span>
-                <div class="tool-tip">
-                    <span style="color: rgb(255, 250, 250); font-size: small;">Talk to us</span>
-                </div>
-            </div>
-            <div class="gth">
-                Github
-                <div class="tool-tip">
-                   <span style="color: rgb(255, 250, 250); font-size: small;">source code will be available soon</span>
-                </div>
-            </div>
-        </section>
     </main>   
     <script src="javascript/app.js">
     </script>
+    <script src="javascript/nav-bar.js"></script>
     <script src="javascript/anim.js"></script>
 </body>
 </html>

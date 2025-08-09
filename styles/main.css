@@ -2,19 +2,26 @@ body {
    font-family: Arial, Helvetica, sans-serif; 
    background-color: rgb(215, 239, 246);
    overflow: scroll;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0;
 }   
 main{
-    margin-top: 60px;
-    margin-left: 10px;
-    padding: 12px;
+    margin-top: 30px;
+    width: 90vw;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
     background-color: rgb(193, 224, 226);
     border-radius: 8px;
     border: 1px solid gray;
-    /*box-shadow: inset 1px 1px 3px rgb(193, 188, 188);*/
 }
 .main-section{
     display: flex;
     flex-direction: column;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 .page-header {
     position: fixed;
@@ -35,6 +42,7 @@ main{
 } 
 .menu{
     width: 30px;
+    cursor: pointer;
 }
 .menu img{
     width: 100%;
@@ -47,6 +55,7 @@ main{
     display: flex;
     justify-content: center;
     column-gap: 2px;
+    margin-left: 5px;
 }
 .first-util-sec{
     margin-right: 6px;
@@ -64,6 +73,18 @@ main{
     align-items: center;
     margin: 5px;
     height: 20px;
+}
+.focus-checker{
+    font-size: small;
+    color: red;
+    margin-left: 10px;
+    display: none;
+}
+.focus-checker-hidden{
+    opacity: 0;
+}
+.focus-checker-visible{
+    opacity: 1;
 }
 .current-ltrs div{
     font-size: small;
@@ -165,6 +186,8 @@ main{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 .typing-sec-nav-tools{
     display: flex;
@@ -322,6 +345,7 @@ main{
     font-size: .8em;
     height: 24px;
     margin-left: 10px;
+    margin-bottom: 7px;
     color:white;
     border-radius: 4px;
     background-color: rgb(21, 203, 235);
@@ -346,7 +370,7 @@ main{
     border: none;
     font-size: 18px;
     color: rgb(255, 255, 255);
-    top: -45%;
+    top: -50px;
     right: 0;
 }
 

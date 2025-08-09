@@ -1,118 +1,26 @@
-@media(max-width:740px){
+@media(max-width:782px){
     .utils-sec{
         flex-direction: column;
     }
-}
-@media(max-width:540px){
-    .keyboard span{
-    
-    }
-}
-/*
-@media screen and (max-width: 1010px) {
-    .sidebar{
-    flex-direction: row;
-    right: 2%;
-    top: -14%;
-    height: 50px;
-    z-index: 1;
-    }
-    .sidebar .current-pg{
-        height: 40px;
-    }
-    .sidebar a button{
-        height: 40px;
-    }
-    .set-sess-dur-sec, .daily-goal-section, .stp-on-err, .ltr-emmtr{
-        lft: 12%;
-    }
-    .sidebar-left{
-        left: 0;
-    }
-    .sidebar div a button {
-        font-size: 12px;
-    }
-   }
-@media(max-width: 900px){
-    .sidebar-left{
-        display: none;
-    }
-}
-@media(max-width: 600px){
-    .page-title{
-        display: none;
-    }    
-}
-@media screen and (max-width: 600px) {
-    .page-title{
-        display: flex;
-        top: -65%;
+    body{
+        height: unset;
     }
     main{
-        height: 300px;
-        margin-top: 200px;
-    }
-    .word-section{
-        overflow: hidden;
-        width: 250px;
-        min-width: 260px;
-        max-height: 90px;
-    }
-    .word-section-cont{
-        margin-top: 75px;
-    }
-    .current-ltrs{
-        display: none;
-    }
-    .key-sec{
-        display: none;
-    }
-    .all-ltrs{
-        display: none;
-    }
-    .keyboard-section{
-        display: none;
-    }
-    .bottom-section{
-        display: grid;
-        font-size: small;
-        height: 170px;
-        padding: 8px;
-        bottom: -65%;
-        left: 2%;
-        right: 2%;
-        grid-template-columns: 1fr;
-    }
-    .sidebar{
-        display: grid;
-        left: 2%;
-        right: 2%;
-        margin-top: 5px;
-        top: -48%;
-        height: 100px;
-        grid-template-columns: 1fr 1fr;
-    }
-    .accuracy-txt, .speed-txt{
-        right: 22%;
-    }
-    .gth{
-        width: auto;
-    }
-    .daily-goal-section{
-        margin-top: 6px;
-    }
-    .support a button{
-        font-size: small;
-    }
-    .timer{
-      top: -38%;  
-      right: 1%;
-    }
-    .daily-goal-section, .set-sess-dur-sec, .stp-on-err, .ltr-emmtr{
-        left: 1%;
-    }
-    body{
-        padding-bottom: 250px;
+         margin-top: 70px;
     }
 }
-*/
+@media(max-width:460px){
+    .typing-sec{
+        width: 80vw;
+    }
+}
+@media(max-width:350px){
+    .typing-sec{
+        width: 75vw;
+    }
+}@media(max-width:352px){
+    .click-to-strt-btn{
+        height: 30px;
+        margin-bottom: 3px;
+    }
+}

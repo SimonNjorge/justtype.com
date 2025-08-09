@@ -711,6 +711,21 @@ function selectChardivs () {
      console.log(index, 'i was blurred')
     });
     */
+   charDiv.addEventListener('click', (event) => {
+    if(onSession){
+      //reloader();
+        //reloader()
+        //onSession = true;
+        /*
+        timerUpdater();
+        strt.innerHTML = 'chars active!';
+        clearTimeout(chrActvMssgToId);
+        chrActvMssgToId = setTimeout(()=>{strt.style.display = 'none'}, 2000);
+        console.log('clicked')
+        event.stopPropagation();*/
+    }
+    event.preventDefault();
+   })
   });
 };
 
@@ -834,35 +849,36 @@ function startInitialiser(){
     }, time * 1000);
     started = true;
 };
-/*
-function bodyClickOnsessionCtrl(){
-  document.body.addEventListener('click', ()=>{
+
+const  focusChecker = document.querySelector('.js-focus-checker');
+let isFocusCheckerDisplayed = false;
+document.body.addEventListener('click', ()=>{
+  /*
     if (onSession) {
-      charDivs[i].addEventListener('blur', ()=>{
-        console.log('i was blurred')
-      });
-      //clearInterval(timerIntervalId);
-      console.log('clicked');
-      //i = 0;
-      //timerUpdater();
-      //reloader();
-    };
- });
-};
-*/
-strt.addEventListener('click', ()=>{
+      focusChecker.classList.remove('focus-checker-hidden');
+      focusChecker.classList.add('focus-checker-visible');
+      isFocusCheckerDisplayed = true;
+      //focusChecker.style.display = 'inherit';
+      //focusChecker.style.opacity = '1';
+    };*/
+});
+strt.addEventListener('click', (event)=>{
   //reloader();
   if(started){
     reloader()
   } else{
     startInitialiser();
   };
-  //onSession = true;
+  //if(isFocusCheckerDisplayed){
+    // focusChecker.style.display = 'none';
+    //focusChecker.style.opacity = '0';
+  //}
+  onSession = true;
   timerUpdater();
   strt.innerHTML = 'chars active!';
   clearTimeout(chrActvMssgToId);
   chrActvMssgToId = setTimeout(()=>{strt.style.display = 'none'}, 2000);
-  //bodyClickOnsessionCtrl();
+  event.stopPropagation();
  });
 
 function speedCalc (){
@@ -886,6 +902,10 @@ document.body.addEventListener('keydown', (event)=>{
     } else{
       startInitialiser();
     };
+    //if(isFocusCheckerDisplayed){
+      //focusChecker.style.display = 'none';
+      //focusChecker.style.opacity = '0';
+    //}
     //onSession = true;
     i = 0;
     strt.style.display = 'inline';
@@ -906,7 +926,17 @@ and displays the text 'chars active, start typing!'
 restartBtn.addEventListener('click', ()=>{
   reloader();
   timerUpdater();
-  //onSession = true;
+   clearTimeout(chrActvMssgToId);
+    chrActvMssgToId = setTimeout(()=>{
+      strt.style.display = 'none'}, 2000);
+ /// if(isFocusCheckerDisplayed){
+      //focusChecker.classList.replace('focus-checker-visible', 'focus-checker-hidden');
+      //focusChecker.classList.add('focus-checker-hidden');
+      //isFocusCheckerDisplayed = false;
+      //focusChecker.style.display = 'none';
+      //focusChecker.style.opacity = 0;
+   // }
+  onSession = true;
   strt.style.display = 'inline';
 });
 
