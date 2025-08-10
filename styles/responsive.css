@@ -24,3 +24,8 @@
         margin-bottom: 3px;
     }
 }
+@media(min-width: 1300px){
+    main{
+        max-width: 1200px;
+    }
+}
