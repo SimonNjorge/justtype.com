@@ -1,0 +1,17 @@
+.tips{
+    align-self: center;
+    width: 500px;
+    height: 26px;
+    overflow: scroll;
+    scrollbar-width: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: small;
+    margin: 4px 4px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.tips p{
+    text-wrap: none;
+}

@@ -14,7 +14,7 @@ main{
     margin-top: 50px;
     width: 90vw;
     padding-top: 2vh;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
     background-color: rgb(193, 224, 226);
     border-radius: 8px;
     border: 1px solid gray;
@@ -468,16 +468,19 @@ main{
 .spd-acc-txt-actv{
     display: flex;
 }
-footer{
+.footer{
+    justify-content: center;
+    width: 100%;
+    font-size: 13px;
     display: flex;
-    column-gap: 20px;
+    column-gap: 10%;
 }
-footer div{
+.footer div{
     display: flex;
     align-items: center;
     column-gap: 9px;
 }
-footer div img{
+.footer div img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
