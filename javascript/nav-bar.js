@@ -23,3 +23,15 @@ links.forEach(link => {
     })
     navBarExpanded = false;
 });
+
+let logo = document.querySelector('.js-logo');
+let animeRunning = true;
+setInterval(()=>{
+    if(animeRunning){
+        logo.style.animationPlayState = 'paused';
+        animeRunning = false;
+    } else {
+        logo.style.animationPlayState = 'running';
+        animeRunning = true;
+    }
+}, 5000);

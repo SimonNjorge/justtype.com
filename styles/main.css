@@ -44,6 +44,44 @@ main{
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
 } 
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 3px solid white;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    animation: rotate 5s ease-in-out infinite;
+}
+.dot1, .dot2{
+    position: absolute;
+    width: 6px;
+    height: 6px; 
+    border-radius: 50%;
+}
+.dot1{
+    top: 25%;
+    left: 18%;
+    background-color: rgb(11, 152, 234);
+}
+.dot2{
+    bottom: 20%;
+    right: 8%;
+    background-color: rgb(11, 152, 234);
+}
+@keyframes rotate {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
 .pg-title{
     border: 1px solid rgb(204, 201, 201);
     padding: 5px;

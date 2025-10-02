@@ -1,36 +1,39 @@
 body {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(215, 239, 246);
- }
-     
- main{
-     width: 94vw;
-     display: flex;
-     flex-direction: column;
-     margin-top: 70px;
-     margin-left: 5px;
-     justify-content: center;
-     align-items: center;
-     background-color: rgb(204, 231, 233);
-     border: 1px solid gray;
-     border-radius: 8px;
- }
- button{
-     cursor: pointer;
-     color: white;
-     border-radius: 6px;
-     border: none;
-     background-color: grey;
-     font-family: Arial, Helvetica, sans-serif;
-     margin: 15px;
- }
- p{
-     margin: 8px;
-     color: rgb(110, 101, 101);
-     align-self: start;
- }
-@media screen and (max-width: 600px){
-    main{
+}
+
+main {
+    width: 94vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(204, 231, 233);
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+}
+
+p {
+    margin: 8px;
+    color: rgb(110, 101, 101);
+    align-self: start;
+}
+
+@media screen and (max-width: 600px) {
+    main {
         width: auto;
         height: auto;
         position: relative;
